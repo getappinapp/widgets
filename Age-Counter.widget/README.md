@@ -1,6 +1,8 @@
-# Age Counter Widget
+# Age Counter
 
-A live age counter that displays your exact age in years with 9 decimal places, updating in real-time.
+A real-time age counter displaying your exact age in years with 9 decimal places.
+
+![screenshot](./screenshot.png)
 
 ## Features
 
@@ -8,16 +10,18 @@ A live age counter that displays your exact age in years with 9 decimal places, 
 - Precise to 9 decimal places for an accurate representation of your age
 - Clean, minimal design with a dark background and monospace font
 
-## Customizing
+## How it works
 
-All visual styling lives in the `className` export inside `index.jsx` as plain CSS.
+- `index.jsx` computes the fractional year difference between now and the `BIRTHDAY` constant on a `TICK_MS` interval and renders it as integer + decimal parts.
+
+## Customization
 
 - **Birth date**: change the `BIRTHDAY` constant near the top of `index.jsx` (format: `DD/MM/YYYY`).
 - **Decimal places**: adjust the `DECIMAL_PLACES` constant.
 - **Update speed**: change `TICK_MS` to control how often the age refreshes.
-- **Size**: adjust `width` and `height` exports.
-- **Position on screen**: adjust `x` and `y` exports.
-- **Colors**: modify `.int` and `.dec` color values for different text colors.
+- **Size**: adjust the `width` / `height` exports.
+- **Position on screen**: adjust the `x` / `y` exports.
+- **Colors**: modify the `.int` and `.dec` color values for different text colors.
 
 ## Notes
 

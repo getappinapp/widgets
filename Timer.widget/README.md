@@ -1,46 +1,34 @@
-# Timer Widget
+# Timer
 
-Description
-- A Pomodoro-style timer widget that provides work and break timers with a simple rounded UI.
+Pomodoro timer widget with a rounded time-based outline.
 
-How it works
-- The UI is implemented in `index.jsx`. Default durations and behavior are configurable in the component code.
+![screenshot](./screenshot.png)
 
-Customization
-- Default durations: open `index.jsx` and adjust the default work/break durations or add settings in the component state.
-- Appearance and theme: edit styles or JSX in `index.jsx` to change colors, fonts, or the circular progress visuals.
-- Controls and behavior: modify start/stop/reset logic in `index.jsx` to change keyboard shortcuts, auto-start behavior, or notifications.
-- Metadata: update `widget.json` to change widget name/description/email.
+## Features
 
-Testing
-- Use the UI to start and stop the timer, or tweak durations to short values for quick testing.
+- 25-minute Pomodoro countdown with a rounded-rectangle progress outline
+- Color-shifting progress (green → yellow → red) or desktop-tint via `window.vibeBG`
+- Click to start/stop, double-click to reset
+- Completion sound (`end.mp3`) via `afplay`
+- Scales proportionally from a single `height` value
 
-Notes
-- If you add persistent settings, consider storing them in localStorage or a small config file so preferences survive restarts.
+## How it works
 
+- `index.jsx` implements the `Timer` component with module-level countdown state ticking every second (`refreshFrequency = 1000`).
+- Progress is rendered as an SVG rect `stroke-dashoffset` around the time text; on expiry the timer resets and plays `end.mp3`.
 
-## Scaling by Height
+## Customization
 
-The widget scales proportionally based on the exported `height` value.
+- **Duration**: change `POMODORO_MINUTES` at the top of `index.jsx`.
+- **Size**: only change the `height` export — everything else (width, font size, stroke, radius) scales via `scale = height / BASE_HEIGHT` (`BASE_HEIGHT = 80`).
+- **Position on screen**: adjust the `x` / `y` exports.
+- **Appearance**: edit styles/JSX in `index.jsx` to change colors, fonts, or the progress visuals.
+- **Sound**: replace `end.mp3` with your own completion sound.
+- **Metadata**: update `widget.json` to change the widget name and description.
 
-```js
-export const height = 60; // Adjust this to resize
-```
+## Notes
 
-**How it works:**
-- `BASE_HEIGHT = 80` is the reference size
-- `scale = height / BASE_HEIGHT` computes the multiplier
-- All dimensions (width, font size, stroke, border radius) multiply by `scale`
-
-**Scaling example:**
-
-| `height` | `scale` | `width` | `fontSize` |
-|----------|---------|---------|------------|
-| 40       | 0.5     | 80      | 12.5       |
-| 80       | 1.0     | 160     | 25         |
-| 120      | 1.5     | 240     | 37.5       |
-
-To resize the widget, only change the `height` export — everything else scales automatically.
+- Click the timer to start/stop; double-click to reset. For quick testing, temporarily set `POMODORO_MINUTES` to a small value.
 
 ## License
 

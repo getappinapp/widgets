@@ -1,27 +1,32 @@
-# Currency Widget
+# Currency
 
-Description
+A currency widget which shows USD-UZS now, but you can customize it to what to show.
 
-- Displays current currency exchange rate(s). By default this widget shows USD → UZS, fetched by the bundled shell script and displayed in the widget UI, data cashe will be stored inside widget folder with `usd-rates.cache` name.
+![screenshot](./screenshot.png)
 
-Permission
+## Features
 
-- Run `chmod +x ~/{your-widget-path}/Currency.widget/rates.sh` to make bash file it runnable.
+- Current USD → UZS rate display
+- On-disk rate cache to reduce API calls
+- Auto-refresh every 24 hours
 
-How it works
+## How it works
 
-- The widget uses `rates.sh` to fetch exchange data and `index.jsx` to render the UI.
+- `rates.sh` fetches exchange data from the configured API endpoint and caches it (`usd-rates.cache`).
+- `index.jsx` exports `command` (`./rates.sh`) and renders the fetched rate in the widget UI.
 
-Customization
+## Customization
 
-- Change which currencies are fetched: edit `rates.sh` to modify the currency pairs or the API endpoint used.
-- Adjust refresh or scheduling: if a refresh interval is defined in `widget.json` or implemented inside the script, change that value there or inside `rates.sh`.
-- Modify appearance and layout: edit `index.jsx` to change text, layout, formatting, or styling.
-- Metadata: update `widget.json` to change the widget name, description information.
+- **Currencies**: edit `rates.sh` to modify the currency pairs or the API endpoint used.
+- **Refresh interval**: change `refreshFrequency` in `index.jsx` (currently 24 hours).
+- **Appearance**: edit `index.jsx` to change text, layout, formatting, or styling.
+- **Metadata**: update `widget.json` to change the widget name and description.
 
-Notes
+## Notes
 
-- Keep network/API keys (if any) out of version-controlled files — use environment variables or local config if you add private credentials.
+- Run `chmod +x ~/{your-widget-path}/Currency.widget/rates.sh` to make the shell script executable.
+- Cache is stored inside the widget folder as `usd-rates.cache`.
+- Keep network/API keys (if any) out of version-controlled files — use environment variables or local config for private credentials.
 
 ## License
 

@@ -2,9 +2,10 @@ import React from "react";
 import { Plus, Trash2, X, GripVertical } from "lucide-react";
 
 export const width = 350;
-export const height = 420;
+export const height = 295;
 export const y = 130;
 export const x = 10;
+export const refreshFrequency = 10000;
 
 const STORAGE_KEY = "todo.widget:tasks";
 
@@ -355,13 +356,14 @@ export const className = `
 
   .todo-widget {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: ${width}px;
+    height: ${height}px;
     max-height: 420px;
     display: flex;
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
     background: #111111;
+    border: 1px solid #ffffff09;
     border-radius: 8px;
     color: #f2f2f4;
     overflow: hidden;
@@ -410,6 +412,10 @@ export const className = `
     cursor: pointer;
     flex-shrink: 0;
     transition: background 0.15s ease, transform 0.1s ease;
+  }
+    
+  .todo-header-add *{
+    cursor: pointer;
   }
 
   .todo-header-add:hover {

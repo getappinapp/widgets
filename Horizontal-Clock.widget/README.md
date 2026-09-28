@@ -1,26 +1,30 @@
-# Horizontal Clock Widget
+# Horizontal Clock
 
 A sleek horizontal clock widget featuring smooth animated seconds transitions with a parallax blur effect.
 
+![screenshot](./screenshot.png)
+
 ## Features
 
-- **Horizontal seconds display** — A scrolling row of seconds with a bright center and fading edges
-- **Smooth animation** — Seconds slide in with an ease-out cubic transition each tick
-- **Depth blur layers** — Multi-layer backdrop blur with gradient masks creates a natural depth-of-field effect on the seconds row
-- **Tabular numerals** — Fixed-width digits prevent layout shift
+- **Horizontal seconds display** — a scrolling row of seconds with a bright center and fading edges
+- **Smooth animation** — seconds slide in with an ease-out cubic transition each tick
+- **Depth blur layers** — multi-layer backdrop blur with gradient masks for a natural depth-of-field effect
+- **Tabular numerals** — fixed-width digits prevent layout shift
 
+## How it works
 
-## Usage
+- `index.jsx` renders the current time with a scrolling seconds row; each tick advances the row with a CSS ease-out cubic transition while blur/gradient layers create the parallax depth effect.
 
-Install this widget in your widget folder and it will display the current time with animated seconds.
+## Customization
 
-## Details
+- **Size**: adjust the `width` / `height` exports (`150` / `180`).
+- **Position on screen**: adjust the `x` / `y` exports.
+- **Font**: edit the `font-family` (`Inter` / `SF Pro Display`).
+- **Animation**: tweak the transition timing and blur layers in `index.jsx`.
 
-| Property | Value                  |
-| -------- | ---------------------- |
-| Width    | 150                    |
-| Height   | 180                    |
-| Font     | Inter / SF Pro Display |
+## Notes
+
+- No shell `command` is used — this widget is pure UI state, so it has no `refreshFrequency`.
 
 ## License
 

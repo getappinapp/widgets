@@ -1,23 +1,31 @@
-# Clock Widget
+# Liquid Clock
 
-A minimal analog clock widget with smooth second hand animation.
+An analog clock widget with smooth second hand animation and a liquid background image.
 
-Description
+![screenshot](./screenshot.png)
 
-- Renders a 170x170 analog clock face using a background image (`bg.png`) with hour, minute, and second hands. The second hand animates smoothly via `requestAnimationFrame`.
+## Features
 
-How it works
+- 170x170 analog clock face with hour, minute, and second hands
+- Smooth second-hand motion via `requestAnimationFrame` (discrete tick optional)
+- Customizable background face image
 
-- `index.jsx` calculates hand angles from the current time and renders them as rotated `<div>` elements. A red second hand uses `requestAnimationFrame` for fluid motion.
+## How it works
 
-Customization
+- `index.jsx` calculates hand angles from the current time and renders them as rotated `<div>` elements over `bg.png`; the red second hand animates fluidly via `requestAnimationFrame`.
 
-- Background: replace `bg.png` with your own clock face image.
-- Size: change the `size` constant at the top of `index.jsx`.
-- Window position: adjust `y`, `x`, `height`, or `width`.
-- Smooth animation: set `smooth = false` to switch to a discrete 1-second tick.
-- Hand styles: edit the `HandWithPill` component props (width, height, pillHeight) for different hand shapes.
-- Metadata: update `widget.json` to change the widget name, description.
+## Customization
+
+- **Background**: replace `bg.png` with your own clock face image.
+- **Size**: change the `size` constant at the top of `index.jsx`.
+- **Position on screen**: adjust the `x` / `y` / `height` / `width` exports.
+- **Animation**: set `smooth = false` to switch to a discrete 1-second tick.
+- **Hand styles**: edit the `HandWithPill` component props (`width`, `height`, `pillHeight`) for different hand shapes.
+- **Metadata**: update `widget.json` to change the widget name and description.
+
+## Notes
+
+- Refreshes every second via `refreshFrequency`.
 
 ## License
 

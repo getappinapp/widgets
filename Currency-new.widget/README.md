@@ -1,25 +1,35 @@
-# Currency New Widget
+# Currency New
 
-Description
-- Displays real-time USD/UZS exchange rates fetched from the Central Bank of Uzbekistan API. Features a clean, minimal UI showing the current rate, daily percentage change, and an interactive 11-day trend chart with hover tooltips. Data is cached for 6 hours to reduce API calls, cashe will be stored inside widget folder with `usd-rates.cache` name.
+A macOS widget displaying real-time USD/UZS exchange rates from the Central Bank of Uzbekistan, featuring an interactive 11-day trend chart with hover tooltips and automatic caching.
 
-Permission
-- Run `chmod +x ~/{your-widget-path}/Currency 2.widget/rates.sh` to make the shell script executable.
+![screenshot](./screenshot.png)
 
-How it works
-- The widget uses `rates.sh` to fetch exchange rate data from the Central Bank of Uzbekistan API, caching results for 6 hours. `index.jsx` renders the UI with a responsive chart component that supports mouse hover for detailed tooltips.
+## Features
 
-Customization
-- Change refresh interval: modify `refreshFrequency` in `index.jsx` (currently set to 24 hours).
-- Adjust cache duration: edit the `CACHE_TTL` variable in `rates.sh` (currently 6 hours).
-- Modify appearance: edit `index.jsx` to change colors, fonts, layout, or chart styling.
-- Change data source: update the API URL in `rates.sh` if you want to fetch different currency pairs.
-- Metadata: update `widget.json` to change the widget name, description information.
+- Current USD/UZS rate with daily percentage change
+- Interactive 11-day trend chart with hover tooltips
+- 6-hour on-disk cache to reduce API calls
+- Auto-refresh every 24 hours
 
-Notes
-- The widget fetches data from the Central Bank of Uzbekistan's public API (no API key required).
-- Network access is required for initial data fetching; cached data is used when offline.
-- The chart displays the last 11 days of data for trend visualization.
+## How it works
+
+- `rates.sh` fetches exchange rate data from the Central Bank of Uzbekistan API and caches it for 6 hours (`usd-rates.cache`).
+- `index.jsx` exports `command` (`./rates.sh`) and renders the rate plus a responsive chart component with mouse-hover tooltips.
+
+## Customization
+
+- **Refresh interval**: modify `refreshFrequency` in `index.jsx` (currently 24 hours).
+- **Cache duration**: edit the `CACHE_TTL` variable in `rates.sh` (currently 6 hours).
+- **Appearance**: edit `index.jsx` to change colors, fonts, layout, or chart styling.
+- **Data source**: update the API URL in `rates.sh` to fetch different currency pairs.
+- **Metadata**: update `widget.json` to change the widget name and description.
+
+## Notes
+
+- Run `chmod +x ~/{your-widget-path}/Currency-new.widget/rates.sh` to make the shell script executable.
+- Fetches from the Central Bank of Uzbekistan's public API (no API key required).
+- Network access is required for the initial fetch; cached data is used when offline.
+- Cache is stored inside the widget folder as `usd-rates.cache`.
 
 ## License
 

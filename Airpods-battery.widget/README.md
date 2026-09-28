@@ -1,6 +1,8 @@
-# AirPods Battery Widget
+# AirPods Battery
 
-A macOS desktop widget that displays real-time battery levels for your AirPods.
+Shows your AirPods battery in a compact widget UI.
+
+![screenshot](./screenshot.png)
 
 ## Features
 
@@ -10,19 +12,20 @@ A macOS desktop widget that displays real-time battery levels for your AirPods.
 - Respects reduced motion preferences
 - Refreshes every 30 seconds
 
-## Requirements
+## How it works
 
-- macOS with Bluetooth enabled
-- AirPods connected and case opened to populate data
+- `index.jsx` exports a `command` running `system_profiler SPBluetoothDataType -json` and parses the connected AirPods battery levels on every `refreshFrequency` tick (`30000` ms).
 
-## Usage
+## Customization
 
-Place the widget in your Appinapp widgets directory. The widget automatically reads Bluetooth data via `system_profiler SPBluetoothDataType`.
+- **Size**: adjust the `width` / `height` exports (`200` / `175`).
+- **Position on screen**: adjust the `x` / `y` exports.
+- **Refresh interval**: change `refreshFrequency` in `index.jsx`.
+- **Colors and layout**: edit `index.jsx` to change indicators, fonts, or theming.
 
-## Dimensions
+## Notes
 
-- Width: 200px
-- Height: 175px
+- Requires macOS with Bluetooth enabled, AirPods connected, and the case opened to populate data.
 
 ## License
 
