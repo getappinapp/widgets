@@ -2,7 +2,6 @@
 
 A real-time age counter displaying your exact age in years with 9 decimal places.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

@@ -2,7 +2,6 @@
 
 A Spotify now-playing widget showing the current track with album-art-driven theming.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

@@ -53,7 +53,6 @@ All per-widget READMEs follow the same template:
 
 <one-line description>
 
-![screenshot](./screenshot.png)
 
 ## Features
 ## How it works

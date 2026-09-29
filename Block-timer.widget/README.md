@@ -2,7 +2,6 @@
 
 A multi-block session timer that runs labeled tasks back-to-back on a scrolling track with click-to-jump, quick-add, and press-and-hold to delete.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

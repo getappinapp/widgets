@@ -2,7 +2,6 @@
 
 A minimalistic, modern to-do list for your desktop. Glassy dark card, quick-add input, one-click complete, and tasks that persist between restarts.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

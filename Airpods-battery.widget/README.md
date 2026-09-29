@@ -2,7 +2,6 @@
 
 Shows your AirPods battery in a compact widget UI.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

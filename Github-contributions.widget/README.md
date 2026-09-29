@@ -2,7 +2,6 @@
 
 A GitHub contribution graph widget showing your yearly commit activity as a heatmap.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

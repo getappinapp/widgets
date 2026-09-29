@@ -2,7 +2,6 @@
 
 A widget that tracks battery level over time with a smooth SVG chart.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

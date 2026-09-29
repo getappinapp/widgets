@@ -2,7 +2,6 @@
 
 Pomodoro timer widget with a rounded time-based outline.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

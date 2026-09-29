@@ -2,7 +2,6 @@
 
 A Spotify now-playing widget with playback progress, marquee titles, and play/pause/next/prev controls.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

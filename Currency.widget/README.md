@@ -2,7 +2,6 @@
 
 A currency widget which shows USD-UZS now, but you can customize it to what to show.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

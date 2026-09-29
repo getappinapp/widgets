@@ -2,7 +2,6 @@
 
 A prayer-times widget showing daily namoz times for Tashkent in Uzbek (Latin).
 
-![screenshot](./screenshot.png)
 
 ## Features
 

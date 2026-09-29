@@ -2,7 +2,6 @@
 
 Displays incomplete reminders from the macOS Reminders app with due dates and notes.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

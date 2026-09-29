@@ -2,7 +2,6 @@
 
 A sleek horizontal clock widget featuring smooth animated seconds transitions with a parallax blur effect.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

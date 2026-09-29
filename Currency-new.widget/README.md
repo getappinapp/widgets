@@ -2,7 +2,6 @@
 
 A macOS widget displaying real-time USD/UZS exchange rates from the Central Bank of Uzbekistan, featuring an interactive 11-day trend chart with hover tooltips and automatic caching.
 
-![screenshot](./screenshot.png)
 
 ## Features
 

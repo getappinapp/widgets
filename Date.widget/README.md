@@ -2,7 +2,6 @@
 
 Displays the current day of the week in large text using the custom Anurati font, refreshed once per day.
 
-![screenshot](./screenshot.png)
 
 ## Features
 
