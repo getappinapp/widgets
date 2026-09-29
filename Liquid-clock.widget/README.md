@@ -2,8 +2,6 @@
 
 An analog clock widget with smooth second hand animation and a liquid background image.
 
-![screenshot](./screenshot.png)
-
 ## Features
 
 - 170x170 analog clock face with hour, minute, and second hands
