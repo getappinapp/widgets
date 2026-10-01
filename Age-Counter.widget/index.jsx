@@ -29,7 +29,7 @@ const AgeCalculator = () => {
   const [intPart, decPart = ""] = ageYears.toFixed(DECIMAL_PLACES).split(".");
 
   return (
-    <div className="card" style={{ height: height, width: width }}>
+    <div className="age-counter" style={{ height: height, width: width }}>
       <span className="int number">{intPart}</span>
       <span className="dot number">.</span>
       <span className="dec number">{decPart}</span>
@@ -40,12 +40,10 @@ const AgeCalculator = () => {
 export default AgeCalculator;
 
 export const className = `
-  * {
+
+.age-counter {
     font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
     -webkit-font-smoothing: antialiased;
-  }
-
-  .card {
     background: #111111;
     display: flex;
     align-items: center;

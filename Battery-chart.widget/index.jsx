@@ -381,8 +381,8 @@ export const className = `
 const styles = {
   container: {
     position: "relative",
-    width: "100vw",
-    height: "100vh",
+    width: 200,
+    height: 180,
     backgroundColor: "#111111",
     backdropFilter: "blur(20px)",
     WebkitBackdropFilter: "blur(20px)",

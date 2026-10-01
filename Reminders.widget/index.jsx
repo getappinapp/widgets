@@ -58,7 +58,7 @@ function formatDue(due) {
   return dateLabel;
 }
 
-const RemindersWidget = ({ output, error, run }) => {
+const RemindersWidget = ({ output, error }) => {
 
   const [manualOutput, setManualOutput] = useState(null);
 
@@ -133,12 +133,6 @@ const RemindersWidget = ({ output, error, run }) => {
 };
 
 export default RemindersWidget;
-export const command = "osascript -l JavaScript ./remind.js 2>&1";
-export const refreshFrequency = 60000;
-export const width = 350;
-export const height = 200;
-export const x = 10;
-export const y = 410;
 
 export const className = `
 .reminders-widget {
@@ -148,7 +142,7 @@ export const className = `
   height: 200px;
   width: 350px;
   box-sizing: border-box;
-  padding: 20px 16px;
+  padding: 10px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -231,3 +225,10 @@ export const className = `
   font-size: 12px;
 }
 `;
+
+export const command = "osascript -l JavaScript ./remind.js 2>&1";
+export const refreshFrequency = 60000;
+export const width = 350;
+export const height = 130;
+export const x = 10;
+export const y = 425;

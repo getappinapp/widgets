@@ -226,8 +226,8 @@ const AirPodsBattery = ({ output, error }) => {
       <div
         role="status"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: width,
+          height: height,
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
@@ -272,8 +272,8 @@ const AirPodsBattery = ({ output, error }) => {
     <section
       aria-label={`${info.name} battery levels`}
       style={{
-        width: "100vw",
-        height: "100vh",
+        width: width,
+        height: height,
         boxSizing: "border-box",
         padding: "16px 14px 13px",
         overflow: "hidden",

@@ -582,12 +582,13 @@ const SpotifyPlayer = ({ run, output }) => {
 
   return (
     <div
+      className="spotify-mini-player"
       style={{
         position: "relative",
         fontFamily: "sans-serif",
         borderRadius: 18,
-        height: "100vh",
-        width: "100vw",
+        height: height,
+        width: width,
         display: "flex",
         alignItems: "center",
         color: `rgb(var(--color,255,255,255))`,
@@ -867,7 +868,7 @@ const SpotifyPlayer = ({ run, output }) => {
 
 export default SpotifyPlayer;
 export const className = `
- * {
+ .spotify-mini-player * {
    font-family: var(--font-sans) /* ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" */ !important;
    font-weight: 600;
@@ -984,10 +985,6 @@ export const className = `
 }
 `;
 
-export const width = 250;
-export const height = 70;
-export const x = 1220;
-export const y = 886;
 export const command = `spotify="Not Running"
 if pgrep -x "Spotify" > /dev/null
 then
@@ -1010,4 +1007,8 @@ fi
 
 # Output the track info
 echo "$spotify"`;
+export const width = 250;
+export const height = 70;
+export const x = 1220;
+export const y = 886;
 export const refreshFrequency = 500;

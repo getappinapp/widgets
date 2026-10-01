@@ -145,8 +145,8 @@ function formatDate(iso) {
 }
 
 const screen = {
-  width: "100vw",
-  height: "100vh",
+  width: width,
+  height: height,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",

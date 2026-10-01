@@ -2,20 +2,16 @@ import { useState } from "react";
 
 export const refreshFrequency = 1000;
 
-export const height = 60; 
-
-const BASE_HEIGHT = 80;
-const scale = height / BASE_HEIGHT;
-
-export const width = 160 * scale;
+export const height = 70;
+export const width = 160;
 export const x = 300;
 export const y = 145;
 
-const w = 140 * scale;
-const h = 60 * scale;
-const r = 6 * scale;
-const stroke = 3 * scale;
-const fontSize = 25 * scale;
+const w = width-20;
+const h = height-15;
+const r = 6;
+const stroke = 3;
+const fontSize = 25;
 
 const POMODORO_MINUTES = 25;
 const TOTAL_SECONDS = POMODORO_MINUTES * 60;
@@ -71,7 +67,6 @@ const Timer = ({ run }) => {
     state.interval = setInterval(tick, 1000);
   };
 
-  // Perimeter math works perfectly now that components scale together
   const perimeter =
     2 * (w - stroke) + 2 * (h - stroke) - 8 * r + 2 * Math.PI * r;
 
@@ -121,8 +116,8 @@ export default Timer;
 
 export const className = `
 #pomodoro {
-  width: 100vw;
-  height: 100vh;
+  width: ${width}px;
+  height: ${height}px;
   background: #0f0f0f;
   display: flex;
   justify-content: center;

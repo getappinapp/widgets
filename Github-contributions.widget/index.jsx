@@ -12,8 +12,14 @@ export const refreshFrequency = 3600000;
 
 export const className = `
 
-html {
-  cursor: none;
+.github-widget,
+.github-widget:hover {
+  cursor: none !important;
+}
+
+.github-widget:hover *,
+.github-widget * {
+  cursor: none !important;
 }
 
 .github-widget {
@@ -70,7 +76,7 @@ html {
 }
 
 .github-cell:hover {
-  transform: scale(1.6);
+  transform: scale(1.8);
   border: 1px solid #ffffff20;
   z-index: 10;
 }

@@ -318,8 +318,8 @@ const SpotifyPlayer = ({ run, output }) => {
         position: "relative",
         fontFamily: "sans-serif",
         borderRadius: 26,
-        height: "100vh",
-        width: "100vw",
+        height: "230px",
+        width: "250px",
         boxSizing: "border-box",
         padding: 22,
         display: "flex",
@@ -329,6 +329,7 @@ const SpotifyPlayer = ({ run, output }) => {
         overflow: "hidden",
         userSelect: "none",
       }}
+      className="spotify-music-player"
     >
       <div
         style={{
@@ -420,7 +421,7 @@ const SpotifyPlayer = ({ run, output }) => {
 export default SpotifyPlayer;
 
 export const className = `
- * {
+ .spotify-music-player * {
    font-family: Arial Rounded MT Bold;
    font-weight: 800;
    user-select: none !important;
