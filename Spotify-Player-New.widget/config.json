@@ -1,0 +1,12 @@
+{
+  "name": "Spotify Player New",
+  "description": "A Spotify current playing song showing widget.",
+  "email": "developerbola@icloud.com",
+  "render": "window",
+  "zIndex": "normal",
+  "height": 80,
+  "width": 250,
+  "x": 10,
+  "y": 10,
+  "allWorkspace": true
+}

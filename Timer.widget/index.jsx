@@ -1,14 +1,7 @@
 import { useState } from "react";
 
-export const refreshFrequency = 1000;
-
-export const height = 70;
-export const width = 160;
-export const x = 300;
-export const y = 145;
-
-const w = width-20;
-const h = height-15;
+const w = 140;
+const h = 55;
 const r = 6;
 const stroke = 3;
 const fontSize = 25;

@@ -976,7 +976,3 @@ export const className = `
     cursor: pointer;
 }
 `;
-export const width = 220;
-export const height = 190;
-export const x = 370;
-export const y = 40;

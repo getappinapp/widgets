@@ -2,7 +2,6 @@
 
 A multi-block session timer that runs labeled tasks back-to-back on a scrolling track with click-to-jump, quick-add, and press-and-hold to delete.
 
-
 ## Features
 
 - Sequential time blocks on a horizontally scrolling track with a live playhead

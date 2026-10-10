@@ -3,13 +3,6 @@ import { useEffect, useState } from "react";
 const githubUsername = "developerbola";
 const githubToken = ""
 
-export const width = 399;
-export const height = 125;
-export const x = 10;
-export const y = 20;
-
-export const refreshFrequency = 3600000;
-
 export const className = `
 
 .github-widget,

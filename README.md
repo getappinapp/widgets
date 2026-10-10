@@ -1,5 +1,3 @@
-# prod-widgets
-
 A collection of desktop widgets for [Appinapp](https://appinapp.mutawirr.uz) — clocks, timers, productivity, system stats, and API-driven widgets. Each widget is a self-contained folder with an `index.jsx`, a `widget.json` manifest, a `README.md`, and a `screenshot.png`.
 
 ## Widgets

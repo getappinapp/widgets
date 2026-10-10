@@ -1,11 +1,4 @@
-export const width = 350;
-export const height = 80;
-export const y = 40;
-export const x = 10;
-
-export const refreshFrequency = 1000 * 60 * 1;
-
-export const command = `curl -s "https://namoz-vaqti.uz/?format=json&lang=lotin&period=today&region=toshkent"`;
+export const command = "curl -s \"https://namoz-vaqti.uz/?format=json&lang=lotin&period=today&region=toshkent\"";
 
 const ORDER = ["bomdod", "quyosh", "peshin", "asr", "shom", "xufton"];
 

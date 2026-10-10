@@ -1,0 +1,13 @@
+{
+  "name": "Duo Indicator",
+  "description": "Shows battery, Wi-Fi, and network status with a Duo-style ring indicator.",
+  "email": "developerbola@icloud.com",
+  "render": "window",
+  "zIndex": "normal",
+  "height": 29,
+  "width": 29,
+  "x": 832,
+  "y": 2,
+  "allWorkspace": true,
+  "refreshFreq": 15000
+}

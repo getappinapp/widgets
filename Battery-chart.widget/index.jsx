@@ -44,8 +44,6 @@ cat <<EOF
 EOF
 `;
 
-export const refreshFrequency = 60 * 1000;
-
 const formatTime = (ts) => {
   if (!ts) return "";
   const date = new Date(ts * 1000);
@@ -469,6 +467,3 @@ const styles = {
     flexShrink: 0,
   },
 };
-
-export const height = 180;
-export const width = 200;

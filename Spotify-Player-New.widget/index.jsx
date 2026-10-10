@@ -422,36 +422,10 @@ export default SpotifyPlayer;
 
 export const className = `
  .spotify-music-player * {
-   font-family: Arial Rounded MT Bold;
-   font-weight: 800;
-   user-select: none !important;
-   -webkit-user-select: none !important;
-   -webkit-touch-callout: none !important;
- }
+font-family: Arial Rounded MT Bold;
+    font-weight: 800;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+  }
 `;
-
-export const width = 250;
-export const height = 230;
-export const command = `
-#!/bin/bash
-
-spotify="Not Running"
-
-if pgrep -x "Spotify" > /dev/null
-then
-  spotify=$(osascript -e '
-    tell application "Spotify"
-      if player state is playing or player state is paused then
-        set trackName to name of current track
-        set artistName to artist of current track
-        set albumUrl to artwork url of current track
-        return trackName & "|" & artistName & "|" & albumUrl
-      else
-        return "Not Running"
-      end if
-    end tell
-  ')
-fi
-
-echo "$spotify"`;
-export const refreshFrequency = 1000;

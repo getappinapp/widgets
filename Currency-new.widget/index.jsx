@@ -1,5 +1,4 @@
 export const command = `./rates.sh`;
-export const refreshFrequency = 60 * 1000 * 60 * 24;
 
 const Currency = ({ output, error }) => {
   const styles = {
@@ -423,7 +422,4 @@ const Chart = ({ data }) => {
     </div>
   );
 };
-export const y = 555;
-export const x = 10;
-export const height = 80;
-export const width = 245;
+

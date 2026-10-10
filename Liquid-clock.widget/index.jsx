@@ -1,13 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import bg from "./bg.png";
 
-export const refreshFrequency = 1000;
 const size = 170;
-
-export const width = size;
-export const height = size;
-export const y = 135;
-export const x = 10;
 
 
 const center = height / 2;

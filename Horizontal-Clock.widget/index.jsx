@@ -130,17 +130,13 @@ const HorizontalClock = () => {
 };
 
 export default HorizontalClock;
-export const width = 150;
-export const height = 180;
-export const y = 348;
-export const x = 1170;
 
 export const className = `
   .cw-root {
     position: relative;
     box-sizing: border-box;
-    width: ${width};
-    height: ${height};
+    width: 400;
+    height: 50;
     border-radius: 20px;
     overflow: hidden;
     font-family: "Inter", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;

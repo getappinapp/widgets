@@ -1,5 +1,13 @@
 {
   "name": "Battery chart",
   "description": "A widget that tracks battery level over time with a smooth SVG chart. Displays current percentage, charging status, time remaining, and a 10-hour history with green (on battery) and blue (charging) gradient fills. Auto-refreshes every 60 seconds.",
-  "email": "developerbola@icloud.com"
+  "email": "developerbola@icloud.com",
+  "render": "window",
+  "zIndex": "normal",
+  "height": 150,
+  "width": 250,
+  "x": 10,
+  "y": 10,
+  "allWorkspace": true,
+  "refreshFreq": 60000
 }

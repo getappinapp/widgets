@@ -1,0 +1,13 @@
+{
+  "name": "Timer",
+  "description": "Pomodoro timer widget with rounded time based outline.",
+  "email": "developerbola@icloud.com",
+  "render": "window",
+  "zIndex": "normal",
+  "height": 70,
+  "width": 160,
+  "x": 300,
+  "y": 145,
+  "allWorkspace": true,
+  "refreshFreq": 1000
+}

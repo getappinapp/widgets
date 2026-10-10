@@ -1,0 +1,13 @@
+{
+  "name": "Github contributions",
+  "description": "A Github contribution graph widget showing your yearly commit activity as a heatmap.",
+  "email": "developerbola@icloud.com",
+  "render": "window",
+  "zIndex": "normal",
+  "height": 125,
+  "width": 399,
+  "x": 10,
+  "y": 20,
+  "allWorkspace": true,
+  "refreshFreq": 3600000
+}

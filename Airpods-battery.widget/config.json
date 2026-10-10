@@ -1,0 +1,13 @@
+{
+  "name": "Airpods battery",
+  "description": "Shows your Airpods battery in cool UI widget.",
+  "email": "developerbola@icloud.com",
+  "render": "window",
+  "zIndex": "normal",
+  "height": 175,
+  "width": 200,
+  "x": 10,
+  "y": 10,
+  "allWorkspace": true,
+  "refreshFreq": 30000
+}

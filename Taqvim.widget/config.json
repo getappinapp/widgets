@@ -1,0 +1,13 @@
+{
+  "name": "Taqvim",
+  "description": "A 5 times pray times widget with islamuz phone widget UI.",
+  "email": "developerbola@icloud.com",
+  "render": "board",
+  "zIndex": "normal",
+  "height": 80,
+  "width": 350,
+  "x": 14,
+  "y": 34,
+  "allWorkspace": true,
+  "refreshFreq": 60000
+}

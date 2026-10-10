@@ -1,9 +1,5 @@
 const { useState, useEffect } = React;
 
-export const width = 230;
-export const height = 50;
-export const x = 10;
-export const y = 895;
 const DECIMAL_PLACES = 9;
 const TICK_MS = 100;
 const MS_PER_YEAR = 365.2425 * 24 * 60 * 60 * 1000;

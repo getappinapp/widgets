@@ -1,10 +1,3 @@
-export const refreshFrequency = 23 * 60 * 60 * 1000;
-
-export const height = 70;
-export const width = 536;
-export const x = 467;
-export const y = 145;
-
 const DateWidget = () => {
   const date = new Date();
   const dayName = date.toLocaleDateString("en-US", { weekday: "long" });

@@ -1,3 +1,5 @@
+export const command = "osascript -l JavaScript ./remind.js 2>&1";
+
 const { useState, useMemo } = React;
 import { Loader2 } from "lucide-react";
 
@@ -150,7 +152,7 @@ export const className = `
 }
 
 .reminders-widget::-webkit-scrollbar {
-  width: 5px;
+  width: 0px;
 }
 
 .reminders-widget::-webkit-scrollbar-thumb {
@@ -225,10 +227,3 @@ export const className = `
   font-size: 12px;
 }
 `;
-
-export const command = "osascript -l JavaScript ./remind.js 2>&1";
-export const refreshFrequency = 60000;
-export const width = 350;
-export const height = 130;
-export const x = 10;
-export const y = 425;

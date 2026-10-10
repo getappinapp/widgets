@@ -1,12 +1,6 @@
 import React from "react";
 import { Plus, Trash2, X, GripVertical } from "lucide-react";
 
-export const width = 350;
-export const height = 295;
-export const y = 130;
-export const x = 10;
-export const refreshFrequency = 10000;
-
 const STORAGE_KEY = "todo.widget:tasks";
 
 function loadTasks() {
