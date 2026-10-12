@@ -1,7 +1,13 @@
-const { useState, useEffect, useLayoutEffect, useRef, useMemo, useCallback } =
-  React;
-const { Check, RotateCcw, Plus } = window.Lucide;
-const Scritto = window.Scritto;
+import {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from "appinap-react";
+import { Check, RotateCcw, Plus } from "appinapp-icons";
+import Scritto from "appinapp-animations";
 
 const TICK_MS = 100;
 const HANDOVER_MS = 380;

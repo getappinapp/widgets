@@ -1,4 +1,4 @@
-const { useState, useEffect } = React;
+import { useState, useEffect } from "appinapp-react";
 
 const DECIMAL_PLACES = 9;
 const TICK_MS = 100;
@@ -36,7 +36,6 @@ const AgeCalculator = () => {
 export default AgeCalculator;
 
 export const className = `
-
 .age-counter {
     font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
     -webkit-font-smoothing: antialiased;

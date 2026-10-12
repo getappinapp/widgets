@@ -1,4 +1,4 @@
-const { useState, useEffect, useRef } = React;
+import { useState, useEffect, useRef } from "appinapp-react";
 
 const LETTERS = ["S", "M", "T", "W", "T", "F", "S"];
 const NAMES = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];

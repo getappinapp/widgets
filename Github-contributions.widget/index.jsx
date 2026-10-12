@@ -1,83 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "appinapp-react";
 
 const githubUsername = "developerbola";
-const githubToken = ""
-
-export const className = `
-
-.github-widget,
-.github-widget:hover {
-  cursor: none !important;
-}
-
-.github-widget:hover *,
-.github-widget * {
-  cursor: none !important;
-}
-
-.github-widget {
-  background: #111;
-  padding: 12px;
-  height: 100vh;
-  width: 100vw;
-  border-radius: 10px;
-  webkit-user-select: none;
-  pointer-events: none;
-}
-
-.github-grid {
-  display: grid;
-  grid-template-rows: repeat(7, 14px);
-  grid-auto-flow: column;
-  grid-auto-columns: 14px;
-  gap: 1px;
-  justify-content: start;
-  align-items: start;
-}
-
-.github-cell {
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  background: #22222290;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8px;
-  font-weight: 600;
-  color: white;
-  transition: transform 0.15s ease;
-  pointer-events: auto;
-}
-
-.github-cell::after {
-  content: attr(data-commit);
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 7px;
-  color: white;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-
-.github-cell:hover::after {
-  opacity: 1;
-}
-
-.github-cell:hover {
-  transform: scale(1.8);
-  border: 1px solid #ffffff20;
-  z-index: 10;
-}
-
-.skeleton {
-  background: #22222290;
-}
-`;
+const githubToken = "";
 
 const getColor = (count) => {
   if (count === 0) return "#22222290";
@@ -246,3 +170,78 @@ export default function GithubWidget() {
     </div>
   );
 }
+
+export const className = `
+.github-widget,
+.github-widget:hover {
+  cursor: none !important;
+}
+
+.github-widget:hover *,
+.github-widget * {
+  cursor: none !important;
+}
+
+.github-widget {
+  background: #111;
+  padding: 12px;
+  height: 100vh;
+  width: 100vw;
+  border-radius: 10px;
+  webkit-user-select: none;
+  pointer-events: none;
+}
+
+.github-grid {
+  display: grid;
+  grid-template-rows: repeat(7, 14px);
+  grid-auto-flow: column;
+  grid-auto-columns: 14px;
+  gap: 1px;
+  justify-content: start;
+  align-items: start;
+}
+
+.github-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #22222290;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.15s ease;
+  pointer-events: auto;
+}
+
+.github-cell::after {
+  content: attr(data-commit);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.github-cell:hover::after {
+  opacity: 1;
+}
+
+.github-cell:hover {
+  transform: scale(1.8);
+  border: 1px solid #ffffff20;
+  z-index: 10;
+}
+
+.skeleton {
+  background: #22222290;
+}
+`;

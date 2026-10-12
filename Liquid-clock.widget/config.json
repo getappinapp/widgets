@@ -2,12 +2,12 @@
   "name": "Liquid clock",
   "description": "An analog clock widget with smooth second hand animation and a liquid background image.",
   "email": "developerbola@icloud.com",
-  "render": "window",
+  "renderMode": "window",
   "zIndex": "normal",
   "height": 170,
   "width": 170,
   "x": 10,
   "y": 135,
-  "allWorkspace": true,
-  "refreshFreq": 1000
+  "onAllWorkspaces": true,
+  "refreshFrequency": 1000
 }

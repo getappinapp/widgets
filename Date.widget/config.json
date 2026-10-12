@@ -2,12 +2,12 @@
   "name": "Date",
   "description": "Displays the current day of the week in large text using the custom Anurati font and be refreshed once per day.",
   "email": "developerbola@icloud.com",
-  "render": "window",
+  "renderMode": "window",
   "zIndex": "normal",
   "height": 70,
   "width": 536,
   "x": 467,
   "y": 145,
-  "allWorkspace": true,
-  "refreshFreq": 82800000
+  "onAllWorkspaces": true,
+  "refreshFrequency": 82800000
 }

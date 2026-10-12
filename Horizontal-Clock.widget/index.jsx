@@ -1,4 +1,4 @@
-const { useState, useEffect, useLayoutEffect, useRef } = React;
+import { useState, useEffect, useLayoutEffect, useRef } from "appinapp-react";
 
 const buildBlurLayers = (direction) =>
   Array.from({ length: 8 }, (_, i) => {

@@ -2,11 +2,11 @@
   "name": "Color Picker",
   "description": "A color picker widget with eyedropper and color format conversion.",
   "email": "developerbola@icloud.com",
-  "render": "window",
-  "zIndex": "normal",
+  "renderMode": "window",
+  "zIndex": "top",
   "height": 28,
   "width": 28,
   "x": 827,
   "y": 2,
-  "allWorkspace": true
+  "onAllWorkspaces": true
 }

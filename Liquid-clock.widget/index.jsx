@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "appinapp-react";
 import bg from "./bg.png";
 
 const size = 170;
-
-
 const center = height / 2;
 const smooth = true;
 

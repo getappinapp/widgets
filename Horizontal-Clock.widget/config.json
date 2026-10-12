@@ -2,11 +2,11 @@
   "name": "Horizontal Clock",
   "description": "A sleek horizontal clock widget featuring smooth animated seconds transitions with a parallax blur effect.",
   "email": "developerbola@icloud.com",
-  "render": "window",
+  "renderMode": "window",
   "zIndex": "normal",
   "height": 50,
   "width": 400,
   "x": 10,
   "y": 10,
-  "allWorkspace": true
+  "onAllWorkspaces": true
 }

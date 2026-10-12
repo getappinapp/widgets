@@ -1,4 +1,5 @@
 export const command = `./rates.sh`;
+import { useState } from "appinapp-react";
 
 const Currency = ({ output, error }) => {
   const styles = {
@@ -206,27 +207,6 @@ const Currency = ({ output, error }) => {
       return "→";
     };
 
-    const getBarHeight = (rate) => {
-      const average = calculateAverage();
-      const maxDeviation = Math.max(
-        ...rateData.map((item) => Math.abs(item.rate - average)),
-      );
-      const deviation = Math.abs(rate - average);
-      const normalizedHeight = maxDeviation > 0 ? deviation / maxDeviation : 0;
-      return 8 + normalizedHeight * 28;
-    };
-
-    const getBarTranslate = (rate) => {
-      const average = calculateAverage();
-      const deviation = rate - average;
-      const maxDeviation = Math.max(
-        ...rateData.map((item) => Math.abs(item.rate - average)),
-      );
-      const normalizedDeviation =
-        maxDeviation > 0 ? deviation / maxDeviation : 0;
-      return normalizedDeviation * -12;
-    };
-
     const changeBadgeStyle = {
       display: "inline-flex",
       alignItems: "center",
@@ -274,7 +254,6 @@ const Currency = ({ output, error }) => {
 };
 
 export default Currency;
-import { useState } from "react";
 
 const Chart = ({ data }) => {
   const width = 115;
@@ -328,7 +307,7 @@ const Chart = ({ data }) => {
       "Nov",
       "Dec",
     ];
-    const [year, month, day] = dateStr.split("-");
+    const [, month, day] = dateStr.split("-");
     return `${months[parseInt(month, 10) - 1]} ${parseInt(day, 10)}`;
   };
 
@@ -422,4 +401,3 @@ const Chart = ({ data }) => {
     </div>
   );
 };
-

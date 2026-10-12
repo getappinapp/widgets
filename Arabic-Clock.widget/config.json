@@ -1,0 +1,10 @@
+{
+  "renderMode": "board",
+  "zIndex": "normal",
+  "width": 380,
+  "height": 150,
+  "x": 595,
+  "y": 102,
+  "onAllWorkspaces": true,
+  "refreshFrequency": null
+}

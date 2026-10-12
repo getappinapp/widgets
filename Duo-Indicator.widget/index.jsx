@@ -22,12 +22,11 @@ const arc = (cx, cy, r, from, to) => {
   return `M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}`;
 };
 
-// Geometry taken from the Duo icon (1024 x 1024 viewBox)
-const C = 512; // ring centre
-const R = 450; // ring radius
-const SW = 90; // ring stroke width
-const START = 211.3; // bottom-left end of Duo's ring (~7 o'clock)
-const SPAN = 297.3; // through the dim tail at the bottom-right
+const C = 512;
+const R = 450;
+const SW = 90;
+const START = 211.3;
+const SPAN = 297.3;
 
 const WIFI_TOP =
   "M511.978 357C423.593 357 335.209 393.438 271.768 452.759C268.189 456.012 268.081 461.543 271.443 465.121L300.398 495.378C303.76 498.957 309.399 499.065 312.978 495.703C338.246 472.279 367.093 453.626 398.976 440.396C434.763 425.43 472.828 417.947 512.086 417.947C551.344 417.947 589.409 425.538 625.196 440.396C657.079 453.735 685.926 472.279 711.194 495.703C714.773 499.065 720.412 498.957 723.774 495.378L752.73 465.121C756.091 461.651 755.983 456.12 752.404 452.759C688.746 393.438 600.362 357 511.978 357Z";

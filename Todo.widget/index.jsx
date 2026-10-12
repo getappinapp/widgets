@@ -1,5 +1,4 @@
-import React from "react";
-import { Plus, Trash2, X, GripVertical } from "lucide-react";
+import { Plus, Trash2, X, GripVertical } from "appinapp-icons";
 
 const STORAGE_KEY = "todo.widget:tasks";
 

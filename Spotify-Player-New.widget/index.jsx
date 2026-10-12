@@ -1,4 +1,4 @@
-const { useState, useEffect, useRef } = React;
+import { useState, useEffect, useRef } from "appinapp-react";
 import defaultImage from "./default.jpg";
 
 const getSmallAlbumArt = (url) => {

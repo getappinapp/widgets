@@ -1,4 +1,4 @@
-const { useState, useEffect, useRef } = React;
+import { useState, useEffect, useRef } from "appinapp-react";
 import defaultImage from "./default.jpg";
 const MARQUEE_GAP = 30;
 const MARQUEE_SPEED = 40; // px/s

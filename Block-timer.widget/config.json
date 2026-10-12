@@ -2,11 +2,11 @@
   "name": "Block Timer",
   "description": "A session-based timer widget with visual track representation.",
   "email": "developerbola@icloud.com",
-  "render": "window",
+  "renderMode": "window",
   "zIndex": "normal",
   "height": 190,
   "width": 220,
   "x": 370,
   "y": 40,
-  "allWorkspace": true
+  "onAllWorkspaces": true
 }

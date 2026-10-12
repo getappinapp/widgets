@@ -2,12 +2,12 @@
   "name": "Currency",
   "description": "A currency widget which is shows usd-uzs now, but you can customize it to what to show.",
   "email": "developerbola@icloud.com",
-  "render": "window",
+  "renderMode": "window",
   "zIndex": "normal",
   "height": 80,
   "width": 230,
   "x": 10,
   "y": 10,
-  "allWorkspace": true,
-  "refreshFreq": 86400000
+  "onAllWorkspaces": true,
+  "refreshFrequency": 86400000
 }

@@ -2,12 +2,12 @@
   "name": "Todo",
   "description": "A minimalistic, modern to-do list widget with persistent tasks, quick-add, and one-click complete.",
   "email": "developerbola@icloud.com",
-  "render": "window",
+  "renderMode": "window",
   "zIndex": "normal",
   "height": 295,
   "width": 350,
   "x": 10,
   "y": 130,
-  "allWorkspace": true,
-  "refreshFreq": 10000
+  "onAllWorkspaces": true,
+  "refreshFrequency": 10000
 }

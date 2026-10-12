@@ -1,7 +1,7 @@
 export const command = "osascript -l JavaScript ./remind.js 2>&1";
 
-const { useState, useMemo } = React;
-import { Loader2 } from "lucide-react";
+import { useState, useMemo } from "appinapp-react";
+import { Loader2 } from "appinapp-icons";
 
 function parseReminders(output) {
   if (!output) return [];
@@ -61,7 +61,6 @@ function formatDue(due) {
 }
 
 const RemindersWidget = ({ output, error }) => {
-
   const [manualOutput, setManualOutput] = useState(null);
 
   const reminders = useMemo(
@@ -70,7 +69,9 @@ const RemindersWidget = ({ output, error }) => {
   );
 
   const isLoading =
-    !error && manualOutput === null && (output === undefined || output === null || output === "");
+    !error &&
+    manualOutput === null &&
+    (output === undefined || output === null || output === "");
 
   if (isLoading) {
     return (

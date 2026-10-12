@@ -2,11 +2,11 @@
   "name": "Menu Clock",
   "description": "A compact menu bar clock with expandable calendar view.",
   "email": "developerbola@icloud.com",
-  "render": "window",
-  "zIndex": "normal",
+  "renderMode": "window",
+  "zIndex": "top",
   "height": 29,
   "width": 70,
   "x": 900,
   "y": 2,
-  "allWorkspace": true
+  "onAllWorkspaces": true
 }
