@@ -1,4 +1,3 @@
-export const command = `./rates.sh`;
 import { useState } from "appinapp-react";
 
 const Currency = ({ output, error }) => {
@@ -401,3 +400,5 @@ const Chart = ({ data }) => {
     </div>
   );
 };
+
+export const command = `./rates.sh`;

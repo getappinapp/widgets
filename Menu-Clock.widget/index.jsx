@@ -71,7 +71,6 @@ const CalendarPill = ({ setHeight, setWidth }) => {
           height: open ? EXPANDED.h : COLLAPSED.h,
         }}
         onClick={toggle}
-        onMouseLeave={toggle}
       >
         <div className="cp-time">
           {pad(now.getHours())}:{pad(now.getMinutes())}
@@ -124,6 +123,7 @@ export const className = `
   }
   .cp-pill {
     background: #000;
+    border: 1px solid #222;
     border-radius: 22px;
     overflow: hidden;
     position: relative;
@@ -136,15 +136,14 @@ export const className = `
   }
   .cp-time {
     position: absolute;
-    top: 5px;
+    top: 3.3px;
     left: 0;
     right: 0;
     text-align: center;
     line-height: 19px;
     font-size: 14px;
     font-weight: 500;
-    letter-spacing: 0.5px;
-    color: #f4ecd6;
+    color: #fafafa;
     font-variant-numeric: tabular-nums;
     transition: top 0.45s cubic-bezier(.2,.8,.2,1);
   }

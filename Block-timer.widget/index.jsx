@@ -5,7 +5,7 @@ import {
   useRef,
   useMemo,
   useCallback,
-} from "appinap-react";
+} from "appinapp-react";
 import { Check, RotateCcw, Plus } from "appinapp-icons";
 import Scritto from "appinapp-animations";
 

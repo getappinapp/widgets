@@ -1,49 +1,3 @@
-export const command = `
-WINDOW_HOURS=10
-FILE="./appinapp-battery-history.csv"
-
-BATT=$(pmset -g batt)
-PCT=$(echo "$BATT" | grep -Eo '[0-9]+%' | head -1 | tr -d '%')
-
-if echo "$BATT" | grep -q "AC Power" && ! echo "$BATT" | grep -q "discharging"; then
-  CHG=1
-else
-  CHG=0
-fi
-
-TS=$(date +%s)
-touch "$FILE"
-echo "$TS,$PCT,$CHG" >> "$FILE"
-
-# Automatically prune entries older than WINDOW_HOURS
-CUTOFF=$((TS - WINDOW_HOURS * 3600))
-awk -F, -v cutoff="$CUTOFF" '$1 >= cutoff' "$FILE" > "$FILE.tmp" && mv "$FILE.tmp" "$FILE"
-
-TIME_REM=$(echo "$BATT" | grep -Eo "[0-9]+:[0-9]+")
-PERCENT=\${PCT:-0}
-TIME_REM=\${TIME_REM:-"0:00"}
-IS_AC=$([ $CHG -eq 1 ] && echo "true" || echo "false")
-
-HIST=$(awk -F',' '
-BEGIN { count = 0 }
-{
-  if ($1 != "" && $2 != "") {
-    if (count > 0) printf ",";
-    printf "{\\"timestamp\\":%s,\\"level\\":%s,\\"isCharging\\":%s}", $1, $2, $3;
-    count++;
-  }
-}' "$FILE")
-
-cat <<EOF
-{
-  "percentage": $PERCENT,
-  "timeRemaining": "$TIME_REM",
-  "isAC": $IS_AC,
-  "history": [$HIST]
-}
-EOF
-`;
-
 const formatTime = (ts) => {
   if (!ts) return "";
   const date = new Date(ts * 1000);
@@ -467,3 +421,49 @@ const styles = {
     flexShrink: 0,
   },
 };
+
+export const command = `
+WINDOW_HOURS=10
+FILE="./appinapp-battery-history.csv"
+
+BATT=$(pmset -g batt)
+PCT=$(echo "$BATT" | grep -Eo '[0-9]+%' | head -1 | tr -d '%')
+
+if echo "$BATT" | grep -q "AC Power" && ! echo "$BATT" | grep -q "discharging"; then
+  CHG=1
+else
+  CHG=0
+fi
+
+TS=$(date +%s)
+touch "$FILE"
+echo "$TS,$PCT,$CHG" >> "$FILE"
+
+# Automatically prune entries older than WINDOW_HOURS
+CUTOFF=$((TS - WINDOW_HOURS * 3600))
+awk -F, -v cutoff="$CUTOFF" '$1 >= cutoff' "$FILE" > "$FILE.tmp" && mv "$FILE.tmp" "$FILE"
+
+TIME_REM=$(echo "$BATT" | grep -Eo "[0-9]+:[0-9]+")
+PERCENT=\${PCT:-0}
+TIME_REM=\${TIME_REM:-"0:00"}
+IS_AC=$([ $CHG -eq 1 ] && echo "true" || echo "false")
+
+HIST=$(awk -F',' '
+BEGIN { count = 0 }
+{
+  if ($1 != "" && $2 != "") {
+    if (count > 0) printf ",";
+    printf "{\\"timestamp\\":%s,\\"level\\":%s,\\"isCharging\\":%s}", $1, $2, $3;
+    count++;
+  }
+}' "$FILE")
+
+cat <<EOF
+{
+  "percentage": $PERCENT,
+  "timeRemaining": "$TIME_REM",
+  "isAC": $IS_AC,
+  "history": [$HIST]
+}
+EOF
+`;

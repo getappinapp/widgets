@@ -1,15 +1,3 @@
-export const command = `W=$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}'); [ -z "$W" ] && W=en0;
-B=$(pmset -g batt);
-BAT=$(echo "$B" | grep -Eo '[0-9]+%' | head -1 | tr -d %);
-AC=$(echo "$B" | grep -q 'AC Power' && echo 1 || echo 0);
-WIFI=$(networksetup -getairportpower "$W" | grep -q On && echo 1 || echo 0);
-H=$(scutil --nwi | awk '/REACH : flags/{print; exit}' | grep -Eo '0x[0-9a-fA-F]+');
-H=\${H:-0x0};
-if [ $((H & 2)) -ne 0 ] && [ $((H & 4)) -eq 0 ]; then STATE=1;
-elif [ $((H & 2)) -ne 0 ]; then STATE=2;
-else STATE=0; fi;
-echo "$BAT|$AC|$WIFI|$STATE`;
-
 const polar = (cx, cy, r, deg) => {
   const a = (deg * Math.PI) / 180;
   return [cx + r * Math.sin(a), cy - r * Math.cos(a)];
@@ -124,3 +112,15 @@ export const className = `
   --duo-track: #ffffff3d; /* 24% white, same as Duo's dim arc */
 }
 `;
+
+export const command = `W=$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}'); [ -z "$W" ] && W=en0;
+B=$(pmset -g batt);
+BAT=$(echo "$B" | grep -Eo '[0-9]+%' | head -1 | tr -d %);
+AC=$(echo "$B" | grep -q 'AC Power' && echo 1 || echo 0);
+WIFI=$(networksetup -getairportpower "$W" | grep -q On && echo 1 || echo 0);
+H=$(scutil --nwi | awk '/REACH : flags/{print; exit}' | grep -Eo '0x[0-9a-fA-F]+');
+H=\${H:-0x0};
+if [ $((H & 2)) -ne 0 ] && [ $((H & 4)) -eq 0 ]; then STATE=1;
+elif [ $((H & 2)) -ne 0 ]; then STATE=2;
+else STATE=0; fi;
+echo "$BAT|$AC|$WIFI|$STATE`;

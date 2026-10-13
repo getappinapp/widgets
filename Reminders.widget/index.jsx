@@ -1,5 +1,3 @@
-export const command = "osascript -l JavaScript ./remind.js 2>&1";
-
 import { useState, useMemo } from "appinapp-react";
 import { Loader2 } from "appinapp-icons";
 
@@ -142,7 +140,7 @@ export const className = `
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   background: transparent;
   color: #e5e5e5;
-  height: 200px;
+  height: 130px;
   width: 350px;
   box-sizing: border-box;
   padding: 10px;
@@ -218,8 +216,8 @@ export const className = `
   color: #ffffff80;
   line-height: 1.2;
 }
-  
-.date{
+
+.reminder-widget .date{
   background: #ffffff10;
   padding: 3px 5px;
   border-radius: 5px;
@@ -228,3 +226,5 @@ export const className = `
   font-size: 12px;
 }
 `;
+
+export const command = "osascript -l JavaScript ./remind.js 2>&1";

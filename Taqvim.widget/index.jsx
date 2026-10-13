@@ -1,5 +1,3 @@
-export const command = "curl -s \"https://namoz-vaqti.uz/?format=json&lang=lotin&period=today&region=toshkent\"";
-
 const ORDER = ["bomdod", "quyosh", "peshin", "asr", "shom", "xufton"];
 
 export default function Taqvim({ output }) {
@@ -94,7 +92,6 @@ const skeletonCSS = `
     100% { background-position: 0% 50%; }
   }
 `;
-
 
 function toMin(t) {
   const [h, m] = t.split(":").map(Number);
@@ -192,3 +189,6 @@ const activeTime = {
   background: "#0b5d2d",
   fontWeight: 600,
 };
+
+export const command =
+  'curl -s "https://namoz-vaqti.uz/?format=json&lang=lotin&period=today&region=toshkent"';

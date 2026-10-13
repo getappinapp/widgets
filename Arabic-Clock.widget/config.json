@@ -1,10 +1,13 @@
 {
+  "name": "Arabic Clock",
+  "description": "A desktop clock showing the date and time in Arabic-style numerals. The digits are frosted glass that blurs your wallpaper behind them, with soft highlights and shadows keeping them readable on dark or light backgrounds.",
+  "email": "developerbola@icloud.com",
   "renderMode": "board",
   "zIndex": "normal",
   "width": 380,
   "height": 150,
-  "x": 595,
-  "y": 102,
+  "x": 552,
+  "y": 111,
   "onAllWorkspaces": true,
   "refreshFrequency": null
 }

@@ -1,5 +1,3 @@
-export const command = `./rates.sh`;
-
 const Currency = ({ output, error }) => {
   const styles = {
     wrapper: {
@@ -299,3 +297,5 @@ const Currency = ({ output, error }) => {
 };
 
 export default Currency;
+
+export const command = `./rates.sh`;
