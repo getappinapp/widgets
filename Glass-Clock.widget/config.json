@@ -1,4 +1,7 @@
 {
+  "name": "Glass clock",
+  "description": "A frosted-glass digital clock with translucent digits, beveled edges, and a soft drop shadow.",
+  "email": "getappinapp@gmail.com",
   "renderMode": "board",
   "zIndex": "normal",
   "width": 442,
