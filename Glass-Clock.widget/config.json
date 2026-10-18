@@ -1,0 +1,17 @@
+{
+  "renderMode": "board",
+  "zIndex": "normal",
+  "width": 442,
+  "height": 195,
+  "x": 631,
+  "y": 109,
+  "onAllWorkspaces": true,
+  "clickThrough": false,
+  "refreshFrequency": null,
+  "liquidGlass": {
+    "enabled": false,
+    "variant": null,
+    "corner_radius": null,
+    "tint_color": null
+  }
+}
